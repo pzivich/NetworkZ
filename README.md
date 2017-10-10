@@ -7,3 +7,4 @@ Network analysis tools to complement ones already part of NetworkX. Package is s
 # Future inclusions:
     -Calculation for contacts attributes
     -Bipartite graph converter with node attribute setting based on other partite
+    -Homophily (assortativity) assessment test via randomized connections
