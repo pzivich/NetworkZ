@@ -5,20 +5,19 @@
 import networkx as nx
 
 def degree_w(G,var='weight',normalized=True):
-    '''Calculation for weighted degree centrality. Currently has only been tested
-    on unweighted graph objects (should work fine with directed graphs). Multiedged
-    graphs might cause issues, so recommend only calculating on single-edged graphs.
-    Returns a dictionary of nodes and weighted degree centrality
-    Calculation is based on Candeloro et al. PLOSone 2016
+    '''Calculation for weighted degree centrality (WDC). Returns a dictionary of WDC values, where 
+    the key is the node and the value is the WDC. Calculation for WDC is based on Candeloro et al. PLOSone 2016
+    
+    Multiedged graphs might cause issues, so recommend only calculating on single-edged graphs. This has not
+    been tested.
     
     G 
         -NextworkX graph object
-    
-    Var 
+    var 
         -edge attritube that corresponds to the weight of each edge. Default is 'weight'
-    
     normalized
-        -whether to normalize the weighted degree centrality. Normalized by number of nodes - 1
+        -whether to normalize the weighted degree centrality. Normalized by number of nodes (n - 1). Default
+         is True
     '''
     dictionary = {}
     for node in G.nodes_iter():
